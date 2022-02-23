@@ -1,4 +1,8 @@
-name: Test
+name: CI Github Actions JavaScript
+on:
+  pull_request:
+    branches:
+      - main
 
 on:
   push:
