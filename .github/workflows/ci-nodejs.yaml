@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-#    branches: [ main ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -25,8 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        SMTP_USER: ${{secrets.SMTP_USER}}
-        SMTP_PASSWORD: ${{secrets.SMTP_USER}}
     - run: npm ci
     - run: npm run build --if-present
     - run: |

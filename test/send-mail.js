@@ -1,14 +1,12 @@
-const smtpUser = JSON.parse(process.env['SMTP_USER'])
-const smtpPass = JSON.parse(process.env['SMTP_PASSWORD'])
+require('dotenv').config();
 const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   host: "smtp.yourdomain.email",
   port: 587,
   secure: false,
   auth: {
-    user: smtpUser
-    pass: smtpPass
-  }
+    user: process.env.SMTP_USER 
+    pass: smtpPassprocess.env.SMTP_PASSWORD
 });
 // send mail with defined transport object
 transporter.sendMail({
