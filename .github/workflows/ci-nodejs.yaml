@@ -25,9 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-      with:
         SMTP_USER: ${{secrets.SMTP_USER}}
         SMTP_PASSWORD: ${{secrets.SMTP_USER}}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: |
+        export SMTP_USER=${{secrets.SMTP_USER}}
+        export SMTP_PASSWORD=${{secrets.SMTP_USER}}
+        npm test
