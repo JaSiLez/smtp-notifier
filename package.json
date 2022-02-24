@@ -2,7 +2,7 @@
   "name": "action-send-mail",
   "main": "main.js",
   "scripts": {
-    "test": "node test/send-mail.js"
+    "test": "node test/helloWorld.js"
   },
   "dependencies": {
     "@actions/core": "^1.2.7",
