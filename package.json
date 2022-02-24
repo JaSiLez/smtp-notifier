@@ -1,5 +1,5 @@
 {
-  "name": "action-send-mail",
+  "name": "smpt-notifier",
   "main": "main.js",
   "scripts": {
     "test": "node test/helloWorld.js"
