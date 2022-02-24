@@ -17,6 +17,7 @@ module.exports = {
       "jsx-a11y",
     ],
     rules: {
+      semi: [2, "never"],
       strict: 0,
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn"
