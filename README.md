@@ -14,7 +14,7 @@ Some features:
 
 ```yaml
 - name: Send mail
-  uses: dawidd6/action-send-mail@v3
+  uses: JaSiLez/action-send-mail@main
   with:
     # Required mail server address:
     server_address: smtp.gmail.com
