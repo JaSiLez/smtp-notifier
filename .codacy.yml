@@ -20,5 +20,5 @@ exclude_paths:
   - "spec/**/*"
   - "benchmarks/**/*"
   - "**.min.js"
-  - "**/tests/**"
-  - "**/node_modules/**"
+  - "tests/**/*"
+  - "node_modules/**/*"
