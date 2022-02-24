@@ -14,7 +14,7 @@ jobs:
   nodejs-build:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 1
+      max-parallel: 2
       matrix:
         node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ nodejs-build ]
     strategy:
-      max-parallel: 1
+      max-parallel: 2
       matrix:
         include:
           - subject: Plain body (attachment)
