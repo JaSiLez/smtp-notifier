@@ -2,7 +2,7 @@ name: Action security analysis
 
 on:
   push:
-    branches: [master, main]
+    branches: [master, main, fix-codeaudicy]
   schedule:
     - cron: '15 7 * * 2'
 
@@ -32,7 +32,7 @@ jobs:
           output: results.sarif
           format: sarif
           # Adjust severity of non-security issues
-          gh-code-scanning-compat: true
+          gh-code-scanning-compat: false
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
