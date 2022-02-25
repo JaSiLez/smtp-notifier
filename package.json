@@ -1,5 +1,5 @@
 {
-  "name": "action-send-mail",
+  "name": "smpt-notifier",
   "main": "main.js",
   "scripts": {
     "test": "node test/helloWorld.js"
@@ -9,6 +9,6 @@
     "@actions/glob": "^0.2.0",
     "nodemailer": "^6.7.2",
     "showdown": "^2.0.0",
-    "dotenv": "^1.1.4"
+    "dotenv": "^16.0.0"
   }
 }

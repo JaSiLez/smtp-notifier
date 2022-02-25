@@ -1,8 +1,10 @@
 name: Action security analysis
 
 on:
-  push:
-    branches: [master, main]
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
   schedule:
     - cron: '15 7 * * 2'
 
@@ -21,22 +23,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Execute Codacy Analysis CLI and generate a SARIF output with the security issues identified during the analysis
       - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@d840f886c4bd4edc059706d09c6a1586111c540b
+        uses: codacy/codacy-analysis-cli-action@0de770495bd94bdac1ba7d5043a72b252ddbeec3
         with:
-          # Check https://github.com/codacy/codacy-analysis-cli#project-token to get your project token from your Codacy repository
-          # You can also omit the token and run the tools that support default configurations
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          verbose: true
           output: results.sarif
           format: sarif
+          verbose: true
           # Adjust severity of non-security issues
-          gh-code-scanning-compat: true
+          gh-code-scanning-compat: false
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
-
 
       # Upload the SARIF file generated in the previous step
       - name: Upload SARIF results file
