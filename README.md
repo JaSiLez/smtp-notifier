@@ -14,7 +14,7 @@ Some features:
 
 ```yaml
 - name: Send mail
-  uses: JaSiLez/action-send-mail@main
+  uses: JaSiLez/smtp-notifier@main
   with:
     # Required mail server address:
     server_address: smtp.gmail.com
@@ -71,3 +71,7 @@ Users who have had problems have reported success by doing each of these three s
 
 The parameters `username` and `password` are set as optional to support self-hosted runners access to on-premise infrastructure. If
 you are accessing public email servers make sure you provide a username/password authentication through [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to make the email delivery secure.
+
+
+### Credits
+Repository created from [action-send-mail](https://github.com/dawidd6/action-send-mail).
