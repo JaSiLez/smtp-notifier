@@ -1,10 +1,11 @@
-name: Action security analysis
+name: Github Action Security Analysis
 
 on:
   pull_request:
     branches: [ main ]
     paths-ignore:
       - README.md
+      - LICENSE
   schedule:
     - cron: '15 7 * * 2'
 
@@ -28,7 +29,7 @@ jobs:
         with:
           output: results.sarif
           format: sarif
-          verbose: true
+          # verbose: true
           # Adjust severity of non-security issues
           gh-code-scanning-compat: false
           # Force 0 exit code to allow SARIF file generation
