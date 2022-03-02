@@ -22,7 +22,7 @@ jobs:
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@0de770495bd94bdac1ba7d5043a72b252ddbeec3
@@ -60,7 +60,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -95,7 +95,7 @@ jobs:
     name: AppInspector Scan
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3
     - uses: actions/setup-dotnet@v1
 #      with:
 #       dotnet-version: '5.0'
