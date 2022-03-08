@@ -1,4 +1,4 @@
-# Send mail Github Action
+# SMTP Notifier Github Action
 
 An action that simply sends a mail to multiple recipients.
 
