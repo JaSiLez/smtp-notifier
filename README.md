@@ -68,7 +68,7 @@ Changes in Gmail settings may be necessary to get this action to work.
 
 Users who have had problems have reported success by doing each of these three steps or by doing the first two steps and using a Gmail account that didn't have 2FA enabled.
 
-##### Instead of using your normal Google password, use an App password.
+#### Instead of using your normal Google password, use an App password
 
 1. [Enable 2-Step Verification.](https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DAndroid).
 This is needed to create an App password.
