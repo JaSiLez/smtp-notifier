@@ -17,10 +17,14 @@ module.exports = {
       "jsx-a11y",
     ],
     rules: {
+      "@typescript-eslint/no-useless-escape": 0,
       semi: [2, "never"],
-      strict: 0,
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn"
+      "react-hooks/exhaustive-deps": "warn",
+      "@typescript-eslint/no-unused-vars": 0,
+      strict: 1,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true
     },
     settings: {
       react: {

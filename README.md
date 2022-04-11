@@ -3,12 +3,12 @@
 An action that simply sends a mail to multiple recipients.
 
 Some features:
+
 - plain text body
 - HTML body
 - multipart body (plain text + HTML)
 - Markdown to HTML converting
 - file attachments (supports globbing)
-
 
 ## Usage
 
@@ -61,6 +61,7 @@ Some features:
 Gmail security settings may cause this Action to fail. This failure may involve a message in the GitHub Actions details about access being denied and an email from Google to the email account being used about a sign-in being blocked and why.
 
 Changes in Gmail settings may be necessary to get this action to work.
+
 1. Google treats this method of using email as a "Less Secure App". However, "Less Secure Apps" can be enabled in [Google profile settings](https://myaccount.google.com/lesssecureapps).
 2. IMAP needs to be enabled in Gmail settings as described [here](https://support.google.com/mail/answer/7126229?hl=en).
 3. If the Gmail account you're trying to use in this Action is already 2FA (Two Factor Authentication) enabled, the 2FA password will need to be provided as well, which isn't included in the default template.
@@ -72,6 +73,6 @@ Users who have had problems have reported success by doing each of these three s
 The parameters `username` and `password` are set as optional to support self-hosted runners access to on-premise infrastructure. If
 you are accessing public email servers make sure you provide a username/password authentication through [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to make the email delivery secure.
 
-
 ### Credits
+
 Repository created from [action-send-mail](https://github.com/dawidd6/action-send-mail).
