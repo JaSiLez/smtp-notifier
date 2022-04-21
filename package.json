@@ -8,7 +8,7 @@
     "@actions/core": "^1.6.0",
     "@actions/glob": "^0.2.1",
     "nodemailer": "^6.7.3",
-    "showdown": "^2.0.2",
+    "showdown": "^2.1.0",
     "dotenv": "^16.0.0"
   }
 }
