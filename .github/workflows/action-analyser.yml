@@ -34,12 +34,11 @@ jobs:
         uses: codacy/codacy-analysis-cli-action@master 
         #codacy/codacy-analysis-cli-action@f38648320929161d81646834fbee4d75f6502aea
         with:
-          tool: false 
           output: results.sarif
           format: sarif
-          # verbose: true
+          verbose: true
           # Adjust severity of non-security issues
-          gh-code-scanning-compat: false
+          # gh-code-scanning-compat: false
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
