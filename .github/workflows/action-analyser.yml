@@ -84,6 +84,15 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: results.sarif
+        # Optional category for the results
+        # Used to differentiate multiple results for one commit
+        category: CodeQL-Analysis        
         
   app-inspector-scan:
     name: AppInspector Scan
