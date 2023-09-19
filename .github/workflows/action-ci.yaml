@@ -10,19 +10,20 @@ on:
       - README.md
 
   workflow_dispatch:
+  
 jobs:
   nodejs-build:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 2
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x, 17.x, 18.x, 20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3.1.0
+      uses: actions/setup-node@v3.6.0
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
