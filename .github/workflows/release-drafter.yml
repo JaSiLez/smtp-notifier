@@ -13,6 +13,11 @@ on:
   # pull_request_target:
   #   types: [opened, reopened, synchronize]
 
+permissions:
+  actions: read
+  contents: read
+
+
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
