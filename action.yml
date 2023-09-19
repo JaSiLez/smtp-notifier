@@ -1,4 +1,4 @@
-name: Send email
+name: SMTP Notifier
 description: Send an email to multiple recipients
 author: JaSiLez
 branding:
