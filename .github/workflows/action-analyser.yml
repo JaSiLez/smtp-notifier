@@ -84,16 +84,11 @@ jobs:
       uses: github/codeql-action/analyze@v2
       id: codeql
       with:
+        check_name: CodeQL-Security-Check
         category: "/language:${{matrix.language}}"
+        add-snippets: true
 
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: "${{ steps.codeql.outputs.sarif-output}}"
-        # Optional category for the results
-        # Used to differentiate multiple results for one commit
-        category: CodeQL-Analysis        
+
         
   app-inspector-scan:
     name: AppInspector Scan
