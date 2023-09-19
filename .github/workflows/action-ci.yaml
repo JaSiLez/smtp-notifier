@@ -10,9 +10,13 @@ on:
       - README.md
 
   workflow_dispatch:
-  
+
+permissions:
+  actions: read
+  contents: read
+    
 jobs:
-  nodejs-build:
+  Build:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 2
@@ -30,9 +34,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 ##    - run: npm test        //Testing GH Actions
-  action-test:
+
+  Test_Actions:
     runs-on: ubuntu-latest
-    needs: [ nodejs-build ]
+    needs: [ Build ]
     strategy:
       max-parallel: 2
       matrix:
