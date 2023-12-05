@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-dotnet@v3.0.2
+    - uses: actions/setup-dotnet@v4
 #      with:
 #       dotnet-version: '5.0'
     - run: dotnet tool install -g Microsoft.CST.ApplicationInspector.CLI
